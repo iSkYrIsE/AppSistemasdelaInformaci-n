@@ -1,0 +1,11 @@
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/exceptions/BackendServiceErrorException.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/exceptions/BackendServiceException.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/exceptions/PokemonNotFound.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/resources/PokemonResource.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/BackendService.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/beans/json/DataErrorJsonAdapter.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/providers/BackendServiceResponseExceptionMapper.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/JAXRSConfiguration.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/beans/DataError.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/beans/Pokemon.java
+/Users/Administrador/NetBeansProjects/trabajo/frontend/src/main/java/es/upsa/ssi/mprest/frontend/model/exceptions/DataErrorsException.java

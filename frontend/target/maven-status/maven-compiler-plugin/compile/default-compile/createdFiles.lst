@@ -1,0 +1,14 @@
+es/upsa/ssi/mprest/frontend/model/exceptions/PokemonNotFound.class
+es/upsa/ssi/mprest/frontend/model/providers/BackendServiceResponseExceptionMapper$1.class
+es/upsa/ssi/mprest/frontend/resources/PokemonResource$1.class
+es/upsa/ssi/mprest/frontend/model/providers/BackendServiceResponseExceptionMapper$2.class
+es/upsa/ssi/mprest/frontend/model/beans/json/DataErrorJsonAdapter.class
+es/upsa/ssi/mprest/frontend/JAXRSConfiguration.class
+es/upsa/ssi/mprest/frontend/model/BackendService.class
+es/upsa/ssi/mprest/frontend/model/beans/DataError.class
+es/upsa/ssi/mprest/frontend/model/exceptions/DataErrorsException.class
+es/upsa/ssi/mprest/frontend/model/exceptions/BackendServiceException.class
+es/upsa/ssi/mprest/frontend/model/exceptions/BackendServiceErrorException.class
+es/upsa/ssi/mprest/frontend/resources/PokemonResource.class
+es/upsa/ssi/mprest/frontend/model/providers/BackendServiceResponseExceptionMapper.class
+es/upsa/ssi/mprest/frontend/model/beans/Pokemon.class
