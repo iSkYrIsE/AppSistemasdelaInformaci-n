@@ -1,0 +1,62 @@
+version: "3"
+
+networks:
+  database-net:
+    driver: bridge
+  hosts-net:
+    driver: bridge
+
+services:
+  oracledb:
+    image: oracle/database:11.2.0.2-xe
+    deploy:
+      replicas: 1
+    environment:
+      ORACLE_PWD: oracle
+    volumes:
+      - /opt/oracle/11gR2XE/oradata:/u01/app/oracle/oradata
+      - /opt/oracle/11gR2XE/scripts/setup:/u01/app/oracle/scripts/setup
+      - /opt/oracle/11gR2XE/scripts/startup:/u01/app/oracle/scripts/startup
+    networks:
+      - database-net
+    expose:
+      - 1521
+    shm_size: '2gb'
+
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 1
+    networks:
+      - database-net
+      - hosts-net
+    expose:
+      - 8888
+    ports:
+      - 8888:8888
+    environment:
+      - DATABASE_DRIVER=oracle.jdbc.pool.OracleDataSource
+      - DATABASE_TYPE=oracle
+      - DATABASE_URL=thin:@oracledb:1521:xe
+      - DATABASE_USER=username
+      - DATABASE_PASSWORD=password
+    depends_on:
+      - oracledb
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 1
+    networks:
+      - hosts-net
+    ports:
+      - 80:8888
+    environment:
+      - ES_UPSA_SSI_MPREST_FRONTEND_MODEL_BACKENDSERVICE_MP_REST_URL=http://localhost:8888
+    depends_on:
+      - backend

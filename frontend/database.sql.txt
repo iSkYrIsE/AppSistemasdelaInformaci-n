@@ -1,0 +1,22 @@
+CREATE TABLE POKEMON
+(
+  NUMEROPOKE      VARCHAR2(4), 
+  NOMBREPOKE      VARCHAR2(30), 
+  TIPO1       VARCHAR2(20), 
+  TIPO2       VARCHAR2(20),
+  DESCRIPCION VARCHAR2(300), 
+  CONSTRAINT "PK_POKEMON"        PRIMARY KEY (NUMEROPOKE),
+  CONSTRAINT "UK_POKEMON.NOMBREPOKE"    UNIQUE      (NOMBREPOKE),
+  CONSTRAINT "NN_POKEMON.NOMBREPOKE" CHECK       (NOMBREPOKE IS NOT NULL),
+  CONSTRAINT "NN_POKEMON.TIPO1" CHECK       (TIPO1 IS NOT NULL),
+  CONSTRAINT "NN_POKEMON.DESCRIPCION" CHECK (DESCRIPCION IS NOT NULL)
+);
+
+INSERT INTO POKEMON(NUMEROPOKE, NOMBREPOKE, TIPO1, TIPO2, DESCRIPCION) 
+VALUES ('1', 'BULBASAUR', 'PLANTA', 'VENENO', 'A Bulbasaur es fácil verle echándose una siesta al sol. La semilla que tiene en el lomo va creciendo cada vez más a medida que absorbe los rayos del sol.');
+
+INSERT INTO POKEMON(NUMEROPOKE, NOMBREPOKE, TIPO1, DESCRIPCION) 
+VALUES ('4', 'CHARMANDER', 'FUEGO', 'La llama que tiene en la punta de la cola arde según sus sentimientos. Llamea levemente cuando está alegre y arde vigorosamente cuando está enfadado.');
+
+INSERT INTO POKEMON(NUMEROPOKE, NOMBREPOKE, TIPO1, DESCRIPCION) 
+VALUES ('7', 'SQUIRTLE', 'AGUA', 'El caparazón de Squirtle no le sirve de protección únicamente. Su forma redondeada y las hendiduras que tiene le ayudan a deslizarse en el agua y le permiten nadar a gran velocidad.');
